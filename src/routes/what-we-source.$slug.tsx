@@ -45,7 +45,7 @@ function waLink(itemName: string, catTitle: string) {
 }
 
 function CategoryDetail() {
-  const { category } = Route.useLoaderData();
+  const { category } = Route.useLoaderData() as { category: import("@/lib/categories").Category };
 
   return (
     <>

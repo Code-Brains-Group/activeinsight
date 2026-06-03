@@ -19,6 +19,7 @@ import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WhatWeSourceSlugRouteImport } from './routes/what-we-source.$slug'
 
 const WhatWeSourceRoute = WhatWeSourceRouteImport.update({
   id: '/what-we-source',
@@ -70,6 +71,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WhatWeSourceSlugRoute = WhatWeSourceSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => WhatWeSourceRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -81,7 +87,8 @@ export interface FileRoutesByFullPath {
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/what-we-source': typeof WhatWeSourceRoute
+  '/what-we-source': typeof WhatWeSourceRouteWithChildren
+  '/what-we-source/$slug': typeof WhatWeSourceSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -93,7 +100,8 @@ export interface FileRoutesByTo {
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/what-we-source': typeof WhatWeSourceRoute
+  '/what-we-source': typeof WhatWeSourceRouteWithChildren
+  '/what-we-source/$slug': typeof WhatWeSourceSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -106,7 +114,8 @@ export interface FileRoutesById {
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/what-we-source': typeof WhatWeSourceRoute
+  '/what-we-source': typeof WhatWeSourceRouteWithChildren
+  '/what-we-source/$slug': typeof WhatWeSourceSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -121,6 +130,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/what-we-source'
+    | '/what-we-source/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -133,6 +143,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/what-we-source'
+    | '/what-we-source/$slug'
   id:
     | '__root__'
     | '/'
@@ -145,6 +156,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/what-we-source'
+    | '/what-we-source/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -157,7 +169,7 @@ export interface RootRouteChildren {
   QuoteRoute: typeof QuoteRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  WhatWeSourceRoute: typeof WhatWeSourceRoute
+  WhatWeSourceRoute: typeof WhatWeSourceRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -232,8 +244,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/what-we-source/$slug': {
+      id: '/what-we-source/$slug'
+      path: '/$slug'
+      fullPath: '/what-we-source/$slug'
+      preLoaderRoute: typeof WhatWeSourceSlugRouteImport
+      parentRoute: typeof WhatWeSourceRoute
+    }
   }
 }
+
+interface WhatWeSourceRouteChildren {
+  WhatWeSourceSlugRoute: typeof WhatWeSourceSlugRoute
+}
+
+const WhatWeSourceRouteChildren: WhatWeSourceRouteChildren = {
+  WhatWeSourceSlugRoute: WhatWeSourceSlugRoute,
+}
+
+const WhatWeSourceRouteWithChildren = WhatWeSourceRoute._addFileChildren(
+  WhatWeSourceRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -245,7 +276,7 @@ const rootRouteChildren: RootRouteChildren = {
   QuoteRoute: QuoteRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  WhatWeSourceRoute: WhatWeSourceRoute,
+  WhatWeSourceRoute: WhatWeSourceRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

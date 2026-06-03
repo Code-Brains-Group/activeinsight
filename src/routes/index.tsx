@@ -48,7 +48,13 @@ function Index() {
         <img src={hero} alt="" width={1600} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
         <div className="container-luxe relative py-28 md:py-40 max-w-4xl">
-          <p className="text-xs uppercase tracking-[0.35em] text-gold mb-6 reveal">Nigeria 🇳🇬 ↔ Kenya 🇰🇪</p>
+          <p className="text-base md:text-xl uppercase tracking-[0.35em] text-gold mb-6 reveal flex items-center gap-3 font-medium">
+            <span>Nigeria</span>
+            <span className="text-4xl md:text-5xl leading-none" aria-hidden>🇳🇬</span>
+            <span className="text-gold/70">↔</span>
+            <span className="text-4xl md:text-5xl leading-none" aria-hidden>🇰🇪</span>
+            <span>Kenya</span>
+          </p>
           <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] text-cream reveal" style={{ animationDelay: "0.1s" }}>
             Your Trusted <span className="text-gold italic">Nigeria-to-Kenya</span> Sourcing & Logistics Partner
           </h1>

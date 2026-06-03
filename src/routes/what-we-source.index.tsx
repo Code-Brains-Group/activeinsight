@@ -3,7 +3,7 @@ import { PageHero } from "@/components/site/Section";
 import { categories } from "@/lib/categories";
 import { ArrowRight } from "lucide-react";
 
-export const Route = createFileRoute("/what-we-source")({
+export const Route = createFileRoute("/what-we-source/")({
   head: () => ({
     meta: [
       { title: "What We Source — Active Insight" },

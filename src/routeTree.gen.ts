@@ -9,7 +9,6 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WhatWeSourceRouteImport } from './routes/what-we-source'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as QuoteRouteImport } from './routes/quote'
@@ -19,13 +18,9 @@ import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WhatWeSourceIndexRouteImport } from './routes/what-we-source.index'
 import { Route as WhatWeSourceSlugRouteImport } from './routes/what-we-source.$slug'
 
-const WhatWeSourceRoute = WhatWeSourceRouteImport.update({
-  id: '/what-we-source',
-  path: '/what-we-source',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -71,10 +66,15 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WhatWeSourceIndexRoute = WhatWeSourceIndexRouteImport.update({
+  id: '/what-we-source/',
+  path: '/what-we-source/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WhatWeSourceSlugRoute = WhatWeSourceSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => WhatWeSourceRoute,
+  id: '/what-we-source/$slug',
+  path: '/what-we-source/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -87,8 +87,8 @@ export interface FileRoutesByFullPath {
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/what-we-source': typeof WhatWeSourceRouteWithChildren
   '/what-we-source/$slug': typeof WhatWeSourceSlugRoute
+  '/what-we-source/': typeof WhatWeSourceIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -100,8 +100,8 @@ export interface FileRoutesByTo {
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/what-we-source': typeof WhatWeSourceRouteWithChildren
   '/what-we-source/$slug': typeof WhatWeSourceSlugRoute
+  '/what-we-source': typeof WhatWeSourceIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -114,8 +114,8 @@ export interface FileRoutesById {
   '/quote': typeof QuoteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/what-we-source': typeof WhatWeSourceRouteWithChildren
   '/what-we-source/$slug': typeof WhatWeSourceSlugRoute
+  '/what-we-source/': typeof WhatWeSourceIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -129,8 +129,8 @@ export interface FileRouteTypes {
     | '/quote'
     | '/services'
     | '/sitemap.xml'
-    | '/what-we-source'
     | '/what-we-source/$slug'
+    | '/what-we-source/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -142,8 +142,8 @@ export interface FileRouteTypes {
     | '/quote'
     | '/services'
     | '/sitemap.xml'
-    | '/what-we-source'
     | '/what-we-source/$slug'
+    | '/what-we-source'
   id:
     | '__root__'
     | '/'
@@ -155,8 +155,8 @@ export interface FileRouteTypes {
     | '/quote'
     | '/services'
     | '/sitemap.xml'
-    | '/what-we-source'
     | '/what-we-source/$slug'
+    | '/what-we-source/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -169,18 +169,12 @@ export interface RootRouteChildren {
   QuoteRoute: typeof QuoteRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  WhatWeSourceRoute: typeof WhatWeSourceRouteWithChildren
+  WhatWeSourceSlugRoute: typeof WhatWeSourceSlugRoute
+  WhatWeSourceIndexRoute: typeof WhatWeSourceIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/what-we-source': {
-      id: '/what-we-source'
-      path: '/what-we-source'
-      fullPath: '/what-we-source'
-      preLoaderRoute: typeof WhatWeSourceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -244,27 +238,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/what-we-source/': {
+      id: '/what-we-source/'
+      path: '/what-we-source'
+      fullPath: '/what-we-source/'
+      preLoaderRoute: typeof WhatWeSourceIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/what-we-source/$slug': {
       id: '/what-we-source/$slug'
-      path: '/$slug'
+      path: '/what-we-source/$slug'
       fullPath: '/what-we-source/$slug'
       preLoaderRoute: typeof WhatWeSourceSlugRouteImport
-      parentRoute: typeof WhatWeSourceRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface WhatWeSourceRouteChildren {
-  WhatWeSourceSlugRoute: typeof WhatWeSourceSlugRoute
-}
-
-const WhatWeSourceRouteChildren: WhatWeSourceRouteChildren = {
-  WhatWeSourceSlugRoute: WhatWeSourceSlugRoute,
-}
-
-const WhatWeSourceRouteWithChildren = WhatWeSourceRoute._addFileChildren(
-  WhatWeSourceRouteChildren,
-)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -276,7 +265,8 @@ const rootRouteChildren: RootRouteChildren = {
   QuoteRoute: QuoteRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  WhatWeSourceRoute: WhatWeSourceRouteWithChildren,
+  WhatWeSourceSlugRoute: WhatWeSourceSlugRoute,
+  WhatWeSourceIndexRoute: WhatWeSourceIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

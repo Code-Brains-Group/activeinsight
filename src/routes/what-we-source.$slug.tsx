@@ -79,32 +79,40 @@ function CategoryDetail() {
           Tap WhatsApp to enquire about any item.
         </h2>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {category.items.map((item, i) => (
             <div
               key={item.name}
-              className="group bg-card border border-border p-6 md:p-7 flex gap-5 items-start hover:border-gold hover:shadow-luxe transition-all"
+              className="group bg-card border border-border overflow-hidden flex flex-col hover:border-gold hover:shadow-luxe transition-all"
             >
-              <div className="font-serif text-2xl text-gold w-10 shrink-0">
-                {String(i + 1).padStart(2, "0")}
+              <div className="aspect-square overflow-hidden bg-secondary">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  width={768}
+                  height={768}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
               </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="font-serif text-xl text-ink">{item.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{item.desc}</p>
+              <div className="p-5 flex flex-col flex-1">
+                <p className="text-[10px] text-gold tracking-[0.25em]">ITEM {String(i + 1).padStart(2, "0")}</p>
+                <h3 className="font-serif text-lg text-ink mt-1.5">{item.name}</h3>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed flex-1">{item.desc}</p>
+                <a
+                  href={waLink(item.name, category.title)}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Enquire about ${item.name} on WhatsApp`}
+                  className="mt-4 inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 py-2.5 text-sm hover:opacity-90 w-full"
+                >
+                  <MessageCircle className="h-4 w-4" /> Enquire on WhatsApp
+                </a>
               </div>
-              <a
-                href={waLink(item.name, category.title)}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Enquire about ${item.name} on WhatsApp`}
-                className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2.5 text-sm hover:opacity-90 shrink-0 self-center"
-              >
-                <MessageCircle className="h-4 w-4" />
-                <span className="hidden sm:inline">WhatsApp</span>
-              </a>
             </div>
           ))}
         </div>
+
 
         {/* OTHER CATEGORIES */}
         <div className="mt-24">

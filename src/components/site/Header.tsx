@@ -21,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-40 bg-ink/95 backdrop-blur border-b border-gold/20">
       <div className="container-luxe flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={logo} alt="Active Insight" width={64} height={64} className="h-16 w-16 object-contain" />
+          <img src={logo} alt="Active Insight" width={72} height={72} className="h-[72px] w-[72px] object-contain" />
           <div className="leading-tight">
             <div className="font-serif text-xl text-gold tracking-wide">Active Insight</div>
             <div className="text-[10px] uppercase tracking-[0.25em] text-cream/60">Sourcing · Logistics</div>

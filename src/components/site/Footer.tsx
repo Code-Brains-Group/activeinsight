@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container-luxe py-16 grid gap-10 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={logo} alt="Active Insight" width={56} height={56} className="h-14 w-14" loading="lazy" />
+            <img src={logo} alt="Active Insight" width={64} height={64} className="h-16 w-16" loading="lazy" />
             <span className="font-serif text-xl text-gold">Active Insight</span>
           </div>
           <p className="text-sm text-cream/70 leading-relaxed">

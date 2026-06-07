@@ -6,9 +6,7 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // Force Nitro on and target Netlify Functions instead of the default
-  // Cloudflare Workers preset, so `npm run build` produces a Netlify-deployable bundle.
   nitro: {
-    preset: "netlify",
+    preset: "cloudflare-module",
   },
 });

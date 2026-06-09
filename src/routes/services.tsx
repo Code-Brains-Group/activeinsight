@@ -35,9 +35,9 @@ function Services() {
       <section className="container-luxe py-20 space-y-12">
         {services.map((s, i) => (
           <div key={s.title} className={`grid lg:grid-cols-12 gap-10 items-center ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
-            <div className="lg:col-span-5 aspect-[4/3] bg-ink relative overflow-hidden grid place-items-center shadow-luxe">
-              <div className="absolute inset-0 opacity-30" style={{ background: "radial-gradient(circle, var(--gold), transparent 70%)" }} />
-              <s.icon className="h-32 w-32 text-gold relative" />
+            <div className="lg:col-span-5 aspect-[4/3] relative overflow-hidden shadow-luxe">
+              <img src={s.image} alt={s.title} width={1024} height={768} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
             </div>
             <div className="lg:col-span-7">
               <p className="text-xs uppercase tracking-[0.3em] text-gold mb-3">0{i + 1} — Service</p>

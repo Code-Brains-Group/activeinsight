@@ -45,8 +45,8 @@ function Index() {
     <>
       {/* HERO */}
       <section className="relative bg-ink text-cream overflow-hidden">
-        <img src={hero} alt="" width={1600} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
+        <img src={hero} alt="Map of Africa showing trade network connections" width={1600} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/30" />
         <div className="container-luxe relative py-28 md:py-40 max-w-4xl">
           <p className="text-base md:text-xl uppercase tracking-[0.35em] text-gold mb-6 reveal flex items-center gap-3 font-medium">
             <span>Nigeria</span>

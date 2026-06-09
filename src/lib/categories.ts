@@ -91,7 +91,7 @@ export const categories: Category[] = [
       { name: "Brazilian Body Wave", desc: "Soft body-wave bundles, tangle-free, dye-able to #613.", image: hairBody },
       { name: "Closure Wigs (4x4)", desc: "Beginner-friendly closures, breathable Swiss lace.", image: hairClosure },
       { name: "Pixie Cut Wigs", desc: "Ready-to-wear short pixie styles in natural colours.", image: hairPixie },
-      { name: "Bonnets & Wig Caps", desc: "Satin bonnets and stocking caps for wig care.", image: hairBonnets },
+      { name: "Braids and Wigs", desc: "Box braids, cornrows, knotless braids and lace-front wigs in various styles.", image: hairBonnets },
     ],
   },
   {

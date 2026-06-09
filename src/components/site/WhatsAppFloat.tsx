@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useRouterState } from "@tanstack/react-router";
 import { MessageCircle, Send, X } from "lucide-react";
 
 const WHATSAPP_NUMBER = "254700000000";
@@ -9,6 +10,8 @@ const GREETINGS = [
 ];
 
 export function WhatsAppFloat() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [teased, setTeased] = useState(false);
   const [message, setMessage] = useState("");
@@ -16,12 +19,13 @@ export function WhatsAppFloat() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    if (!isHome) return;
     const t = setTimeout(() => {
       setOpen(true);
       setTeased(true);
     }, 3000);
     return () => clearTimeout(t);
-  }, []);
+  }, [isHome]);
 
   useEffect(() => {
     if (open) setTimeout(() => inputRef.current?.focus(), 250);

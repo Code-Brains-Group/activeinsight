@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/africa-network.jpg";
 import logistics from "@/assets/logistics.jpg";
 import { SectionHeader } from "@/components/site/Section";
 import { ArrowRight, Search, ShieldCheck, Ship, MapPin, Wallet, Sparkles, BadgeCheck, Clock } from "lucide-react";

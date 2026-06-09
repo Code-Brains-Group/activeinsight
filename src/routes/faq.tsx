@@ -26,12 +26,12 @@ export const Route = createFileRoute("/faq")({
 });
 
 const faqs = [
-  { q: "How long does shipping take from Nigeria to Kenya?", a: "Air cargo typically takes 7–14 working days from confirmation to arrival in Kenya, depending on customs and volume. Sea freight takes longer but is more economical for bulk." },
+  { q: "How long does shipping take from Nigeria to Kenya?", a: "Air cargo takes 3–4 working days. We ship weekly from Nigeria to Kenya on Tuesdays and Thursdays." },
   { q: "How do I pay — in KES or NGN?", a: "You pay in KES. We handle the NGN payment to the Nigerian vendor on your behalf at the live exchange rate, with no hidden FX margins." },
-  { q: "What if a product turns out to be inauthentic?", a: "We physically verify every item before shipping. In the rare case of an issue, we replace or refund — your shipment is our reputation." },
+  { q: "What if a product turns out to be inauthentic?", a: "We physically verify every item before shipping and make sure every product is checked before dispatch. Because verification happens before shipping, we do not replace products in rare post-shipping cases." },
   { q: "Do you handle customs?", a: "Yes — we manage all documentation and customs clearance on the Kenyan side as part of the cargo rate." },
   { q: "Can I source bulk wholesale orders?", a: "Absolutely. We work with both individuals and businesses, and offer preferential rates for repeat or bulk orders." },
-  { q: "Where do I pick up my order in Kenya?", a: "We have a drop-off hub in Nairobi CBD, and offer doorstep delivery nationwide via trusted courier partners." },
+  { q: "Where do I pick up my order in Kenya?", a: "Our Nairobi pickup point is Western Delicacies Restaurant on Ngong Road, after City Mortuary, beside ThemeWood Furniture and opposite Nairobi Baptist. We also have Lagos drop-off points at 22, Oladimeji Street, Aguda - Surulere, Lagos, and 10, Emmanuel Collage Mosalasi, Alagbado, Lagos." },
 ];
 
 function FAQ() {

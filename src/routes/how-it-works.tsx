@@ -1,5 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
+import { quoteWhatsAppUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/how-it-works")({
   head: () => ({
@@ -20,7 +21,7 @@ const steps = [
   { t: "We source & verify from trusted vendors", d: "We engage our vendor network in Nigeria, send you options and physically verify the chosen products." },
   { t: "Payment facilitation & confirmation", d: "You pay in KES — we handle the NGN side. Receipts and confirmations issued for full transparency." },
   { t: "Cargo coordination & shipping begins", d: "Goods are packaged, documented and dispatched via our cross-border cargo channels." },
-  { t: "Pickup, delivery or drop-off in Kenya", d: "Collect at our drop-off hub or choose doorstep delivery anywhere in Kenya." },
+  { t: "Pickup, delivery or drop-off", d: "Collect from our Nairobi pickup point, use our Lagos drop-off locations, or choose doorstep delivery where available." },
 ];
 
 function HowItWorks() {
@@ -39,7 +40,7 @@ function HowItWorks() {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Link to="/quote" className="inline-flex bg-gold text-ink px-8 py-3.5 font-medium hover:bg-gold-soft">Start your request</Link>
+          <a href={quoteWhatsAppUrl} target="_blank" rel="noreferrer" className="inline-flex bg-gold text-ink px-8 py-3.5 font-medium hover:bg-gold-soft">Start your request</a>
         </div>
       </section>
     </>

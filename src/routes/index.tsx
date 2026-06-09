@@ -3,6 +3,7 @@ import hero from "@/assets/africa-network.jpg";
 import logistics from "@/assets/logistics.jpg";
 import { SectionHeader } from "@/components/site/Section";
 import { ArrowRight, Search, ShieldCheck, Ship, MapPin, Wallet, Sparkles, BadgeCheck, Clock } from "lucide-react";
+import { quoteWhatsAppUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,7 +23,7 @@ const services = [
   { icon: Search, title: "Vendor Sourcing", desc: "We identify and engage trusted Nigerian vendors for your specific needs." },
   { icon: ShieldCheck, title: "Product Verification", desc: "Every item is inspected and verified for authenticity before shipping." },
   { icon: Ship, title: "Logistics & Cargo", desc: "End-to-end coordination of cargo from origin to your doorstep in Kenya." },
-  { icon: MapPin, title: "Pickup & Drop-Off", desc: "Convenient collection points across Nairobi and major Kenyan cities." },
+  { icon: MapPin, title: "Pickup & Drop-Off", desc: "Convenient Lagos drop-off locations and a Nairobi pickup point on Ngong Road." },
   { icon: Wallet, title: "Payment Facilitation", desc: "Seamless KES ↔ NGN payment handling with full transparency." },
 ];
 
@@ -31,7 +32,7 @@ const steps = [
   "We source & verify from trusted vendors",
   "Payment facilitation & confirmation",
   "Cargo coordination & shipping begins",
-  "Pickup, delivery or drop-off in Kenya",
+  "Pickup, delivery or Lagos drop-off coordination",
 ];
 
 const reasons = [
@@ -62,15 +63,15 @@ function Index() {
             We help individuals and businesses source, verify, and ship authentic products from Nigeria to Kenya with confidence.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 reveal" style={{ animationDelay: "0.3s" }}>
-            <Link to="/quote" className="inline-flex items-center gap-2 bg-gold text-ink px-7 py-3.5 font-medium hover:bg-gold-soft transition-colors">
+            <a href={quoteWhatsAppUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-gold text-ink px-7 py-3.5 font-medium hover:bg-gold-soft transition-colors">
               Get Started <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
             <Link to="/contact" className="inline-flex items-center gap-2 border border-gold text-gold px-7 py-3.5 hover:bg-gold hover:text-ink transition-colors">
               Contact Us
             </Link>
-            <Link to="/quote" className="inline-flex items-center gap-2 border border-cream/30 text-cream px-7 py-3.5 hover:border-gold hover:text-gold transition-colors">
+            <a href={quoteWhatsAppUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-cream/30 text-cream px-7 py-3.5 hover:border-gold hover:text-gold transition-colors">
               Request a Quote
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -149,7 +150,7 @@ function Index() {
             <h2 className="font-serif text-4xl md:text-5xl text-cream">Ready to source from Nigeria?</h2>
             <p className="mt-4 text-cream/70 max-w-xl mx-auto">Send us your product list and we'll get back with a tailored quote within 24 hours.</p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link to="/quote" className="bg-gold text-ink px-8 py-3.5 font-medium hover:bg-gold-soft">Request a Quote</Link>
+              <a href={quoteWhatsAppUrl} target="_blank" rel="noreferrer" className="bg-gold text-ink px-8 py-3.5 font-medium hover:bg-gold-soft">Request a Quote</a>
               <Link to="/contact" className="border border-gold text-gold px-8 py-3.5 hover:bg-gold hover:text-ink transition-colors">Talk to us</Link>
             </div>
           </div>

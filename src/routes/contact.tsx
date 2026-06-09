@@ -2,7 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { PageHero } from "@/components/site/Section";
-import { Mail, Phone, MapPin, Clock, MessageCircle, Instagram, Facebook, Twitter, Linkedin, QrCode } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, MessageCircle, Instagram, Facebook, Music2 } from "lucide-react";
+import qrCode from "@/assets/newImages/qrcode.jpeg";
+import { chatWhatsAppUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -72,20 +74,26 @@ function Contact() {
         </div>
 
         <aside className="lg:col-span-2 space-y-6">
-          <InfoCard icon={MapPin} title="Address">Nairobi, Kenya<br />Lagos, Nigeria</InfoCard>
-          <InfoCard icon={Phone} title="Phone / WhatsApp">+254 700 000 000</InfoCard>
+          <InfoCard icon={MapPin} title="Surulere Drop-Off & Pickup">22, Oladimeji Street, Aguda - Surulere, Lagos, Nigeria</InfoCard>
+          <InfoCard icon={MapPin} title="Abule Egba Drop-Off">10, Emmanuel Collage Mosalasi, Alagbado, Lagos, Nigeria</InfoCard>
+          <InfoCard icon={MapPin} title="Nairobi Pickup">Western Delicacies Restaurant on Ngong Road. After City Mortuary, beside ThemeWood Furniture, opposite Nairobi Baptist, Nairobi, Kenya.</InfoCard>
+          <InfoCard icon={Phone} title="Phone / WhatsApp">+254 100 730 474</InfoCard>
           <InfoCard icon={Mail} title="Email">hello@activeinsight.co</InfoCard>
           <InfoCard icon={Clock} title="Business Hours">Mon–Fri · 8am–6pm EAT<br />Sat · 9am–2pm EAT</InfoCard>
 
           <div className="bg-ink text-cream p-6 text-center">
-            <div className="h-32 w-32 mx-auto bg-cream grid place-items-center"><QrCode className="h-20 w-20 text-ink" /></div>
+            <img src={qrCode} alt="Active Insight QR code" width={128} height={128} className="h-32 w-32 mx-auto bg-cream object-contain" />
             <p className="mt-4 text-sm text-gold uppercase tracking-widest">Scan our QR code</p>
             <p className="text-xs text-cream/70 mt-1">Access our social platforms</p>
           </div>
 
           <div className="flex justify-center gap-3">
-            {[Instagram, Facebook, Twitter, Linkedin].map((Icon, i) => (
-              <a key={i} href="#" className="h-10 w-10 grid place-items-center border border-ink hover:bg-ink hover:text-cream transition-colors"><Icon className="h-4 w-4" /></a>
+            {[
+              { label: "Facebook", Icon: Facebook },
+              { label: "Instagram", Icon: Instagram },
+              { label: "TikTok", Icon: Music2 },
+            ].map(({ label, Icon }) => (
+              <a key={label} href="#" aria-label={label} className="h-10 w-10 grid place-items-center border border-ink hover:bg-ink hover:text-cream transition-colors"><Icon className="h-4 w-4" /></a>
             ))}
           </div>
         </aside>
@@ -95,13 +103,13 @@ function Contact() {
         <div className="aspect-[16/6] w-full overflow-hidden border border-border">
           <iframe
             title="Active Insight Location"
-            src="https://www.google.com/maps?q=Nairobi%2C%20Kenya&output=embed"
+            src="https://www.google.com/maps?q=Western%20Delicacies%20Restaurant%20Ngong%20Road%20Nairobi%20Kenya&output=embed"
             className="w-full h-full"
             loading="lazy"
           />
         </div>
         <div className="text-center mt-10">
-          <a href="https://wa.me/254700000000" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 hover:opacity-90">
+          <a href={chatWhatsAppUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 hover:opacity-90">
             <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
           </a>
         </div>

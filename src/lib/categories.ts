@@ -62,8 +62,6 @@ import whlHair from "@/assets/items/whl-hair.jpg";
 import whlBoutique from "@/assets/items/whl-boutique.jpg";
 import whlCosmetics from "@/assets/items/whl-cosmetics.jpg";
 import whlFood from "@/assets/items/whl-food.jpg";
-import whlPrivate from "@/assets/items/whl-private.jpg";
-import whlSample from "@/assets/items/whl-sample.jpg";
 
 export interface CategoryItem {
   name: string;
@@ -189,8 +187,6 @@ export const categories: Category[] = [
       { name: "Boutique Restock Packages", desc: "Curated RTW and accessory restock bundles.", image: whlBoutique },
       { name: "Wholesale Cosmetics Cartons", desc: "Sealed cartons direct from Nigerian beauty brands.", image: whlCosmetics },
       { name: "Mixed Foodstuff Containers", desc: "Container-load sourcing for African food shops.", image: whlFood },
-      { name: "Private-Label Sourcing", desc: "We help you brand and source your own line.", image: whlPrivate },
-      { name: "Sample Sourcing", desc: "Order single units to test before going bulk.", image: whlSample },
     ],
   },
 ];

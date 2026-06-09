@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { getCategory, categories } from "@/lib/categories";
 import { ArrowLeft, MessageCircle } from "lucide-react";
+import { chatWhatsAppUrl, getWhatsAppUrl, quoteWhatsAppUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/what-we-source/$slug")({
   head: ({ params }) => {
@@ -35,13 +36,10 @@ export const Route = createFileRoute("/what-we-source/$slug")({
   component: CategoryDetail,
 });
 
-const WA_NUMBER = "254700000000";
-
 function waLink(itemName: string, catTitle: string) {
-  const text = encodeURIComponent(
+  return getWhatsAppUrl(
     `Hello Active Insight, I'd like to enquire about "${itemName}" (${catTitle}). Please share pricing and availability.`,
   );
-  return `https://wa.me/${WA_NUMBER}?text=${text}`;
 }
 
 function CategoryDetail() {
@@ -141,9 +139,9 @@ function CategoryDetail() {
           <h2 className="font-serif text-3xl md:text-4xl">Don't see exactly what you need?</h2>
           <p className="mt-3 text-cream/70 max-w-xl mx-auto">Send us your custom request and we'll source it from a trusted Nigerian vendor.</p>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
-            <Link to="/quote" className="bg-gold text-ink px-7 py-3 font-medium hover:bg-gold-soft">Request a Quote</Link>
+            <a href={quoteWhatsAppUrl} target="_blank" rel="noreferrer" className="bg-gold text-ink px-7 py-3 font-medium hover:bg-gold-soft">Request a Quote</a>
             <a
-              href={`https://wa.me/${WA_NUMBER}`}
+              href={chatWhatsAppUrl}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 border border-gold text-gold px-7 py-3 hover:bg-gold hover:text-ink transition-colors"

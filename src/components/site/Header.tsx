@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logoAsset from "@/assets/logo.jpg.asset.json";
-const logo = logoAsset.url;
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/newImages/activeLogo.jpeg";
+import { quoteWhatsAppUrl } from "@/lib/whatsapp";
 
 const links = [
   { to: "/", label: "Home" },
@@ -39,9 +39,9 @@ export function Header() {
               {l.label}
             </Link>
           ))}
-          <Link to="/quote" className="ml-2 inline-flex items-center px-5 py-2.5 bg-gold text-ink text-sm font-medium hover:bg-gold-soft transition-colors">
+          <a href={quoteWhatsAppUrl} target="_blank" rel="noreferrer" className="ml-2 inline-flex items-center px-5 py-2.5 bg-gold text-ink text-sm font-medium hover:bg-gold-soft transition-colors">
             Request a Quote
-          </Link>
+          </a>
         </nav>
         <button className="lg:hidden text-cream" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X /> : <Menu />}
@@ -55,7 +55,7 @@ export function Header() {
                 {l.label}
               </Link>
             ))}
-            <Link to="/quote" onClick={() => setOpen(false)} className="mt-2 text-center bg-gold text-ink py-3">Request a Quote</Link>
+            <a href={quoteWhatsAppUrl} target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="mt-2 text-center bg-gold text-ink py-3">Request a Quote</a>
           </div>
         </div>
       )}

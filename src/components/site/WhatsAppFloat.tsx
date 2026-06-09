@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { MessageCircle, Send, X } from "lucide-react";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
-const WHATSAPP_NUMBER = "254700000000";
 const GREETINGS = [
   "Hello there 👋 How can we help you today?",
   "Karibu! Need help sourcing from Nigeria?",
@@ -34,7 +34,7 @@ export function WhatsAppFloat() {
   const send = (e?: React.FormEvent) => {
     e?.preventDefault();
     const text = message.trim() || "Hello Active Insight, I'd like to enquire.";
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    const url = getWhatsAppUrl(text);
     window.open(url, "_blank", "noopener,noreferrer");
     setMessage("");
     setOpen(false);

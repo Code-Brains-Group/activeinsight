@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
-import { Search, ShieldCheck, Ship, MapPin, Wallet } from "lucide-react";
+import sourcingImg from "@/assets/service-sourcing.jpg";
+import verificationImg from "@/assets/service-verification.jpg";
+import logisticsImg from "@/assets/service-logistics.jpg";
+import pickupImg from "@/assets/service-pickup.jpg";
+import paymentImg from "@/assets/service-payment.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -17,11 +21,11 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { icon: Search, title: "Vendor Sourcing", desc: "We tap into our network of vetted Nigerian suppliers to find the exact product you need — at the right quality and price.", points: ["Curated vendor shortlists", "Wholesale & retail options", "Negotiation on your behalf"] },
-  { icon: ShieldCheck, title: "Product Verification", desc: "Before anything ships, our team physically inspects every item to confirm authenticity, condition and accuracy of your order.", points: ["Photo & video proof", "Quality checks", "Authenticity confirmation"] },
-  { icon: Ship, title: "Logistics & Cargo Coordination", desc: "End-to-end cargo management from packaging in Nigeria to arrival in Kenya, with clear tracking throughout.", points: ["Air & sea cargo", "Customs handling", "Insurance options"] },
-  { icon: MapPin, title: "Pickup & Drop-Off Services", desc: "Convenient collection at our Kenyan drop-off points or doorstep delivery anywhere in the country.", points: ["Nairobi CBD hub", "Nationwide courier", "Doorstep delivery"] },
-  { icon: Wallet, title: "Payment Facilitation (KES ↔ NGN)", desc: "We handle the cross-border payment so you transact only in your local currency — transparent, fast and secure.", points: ["Live exchange rates", "No hidden FX fees", "Documented receipts"] },
+  { image: sourcingImg, title: "Vendor Sourcing", desc: "We tap into our network of vetted Nigerian suppliers to find the exact product you need — at the right quality and price.", points: ["Curated vendor shortlists", "Wholesale & retail options", "Negotiation on your behalf"] },
+  { image: verificationImg, title: "Product Verification", desc: "Before anything ships, our team physically inspects every item to confirm authenticity, condition and accuracy of your order.", points: ["Photo & video proof", "Quality checks", "Authenticity confirmation"] },
+  { image: logisticsImg, title: "Logistics & Cargo Coordination", desc: "End-to-end cargo management from packaging in Nigeria to arrival in Kenya, with clear tracking throughout.", points: ["Air & sea cargo", "Customs handling", "Insurance options"] },
+  { image: pickupImg, title: "Pickup & Drop-Off Services", desc: "Convenient collection at our Kenyan drop-off points or doorstep delivery anywhere in the country.", points: ["Nairobi CBD hub", "Nationwide courier", "Doorstep delivery"] },
+  { image: paymentImg, title: "Payment Facilitation (KES ↔ NGN)", desc: "We handle the cross-border payment so you transact only in your local currency — transparent, fast and secure.", points: ["Live exchange rates", "No hidden FX fees", "Documented receipts"] },
 ];
 
 function Services() {
@@ -31,9 +35,9 @@ function Services() {
       <section className="container-luxe py-20 space-y-12">
         {services.map((s, i) => (
           <div key={s.title} className={`grid lg:grid-cols-12 gap-10 items-center ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
-            <div className="lg:col-span-5 aspect-[4/3] bg-ink relative overflow-hidden grid place-items-center shadow-luxe">
-              <div className="absolute inset-0 opacity-30" style={{ background: "radial-gradient(circle, var(--gold), transparent 70%)" }} />
-              <s.icon className="h-32 w-32 text-gold relative" />
+            <div className="lg:col-span-5 aspect-[4/3] relative overflow-hidden shadow-luxe">
+              <img src={s.image} alt={s.title} width={1024} height={768} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
             </div>
             <div className="lg:col-span-7">
               <p className="text-xs uppercase tracking-[0.3em] text-gold mb-3">0{i + 1} — Service</p>

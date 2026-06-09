@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
-import { Search, ShieldCheck, Ship, MapPin, Wallet } from "lucide-react";
+import sourcingImg from "@/assets/service-sourcing.jpg";
+import verificationImg from "@/assets/service-verification.jpg";
+import logisticsImg from "@/assets/service-logistics.jpg";
+import pickupImg from "@/assets/service-pickup.jpg";
+import paymentImg from "@/assets/service-payment.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -17,11 +21,11 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { icon: Search, title: "Vendor Sourcing", desc: "We tap into our network of vetted Nigerian suppliers to find the exact product you need — at the right quality and price.", points: ["Curated vendor shortlists", "Wholesale & retail options", "Negotiation on your behalf"] },
-  { icon: ShieldCheck, title: "Product Verification", desc: "Before anything ships, our team physically inspects every item to confirm authenticity, condition and accuracy of your order.", points: ["Photo & video proof", "Quality checks", "Authenticity confirmation"] },
-  { icon: Ship, title: "Logistics & Cargo Coordination", desc: "End-to-end cargo management from packaging in Nigeria to arrival in Kenya, with clear tracking throughout.", points: ["Air & sea cargo", "Customs handling", "Insurance options"] },
-  { icon: MapPin, title: "Pickup & Drop-Off Services", desc: "Convenient collection at our Kenyan drop-off points or doorstep delivery anywhere in the country.", points: ["Nairobi CBD hub", "Nationwide courier", "Doorstep delivery"] },
-  { icon: Wallet, title: "Payment Facilitation (KES ↔ NGN)", desc: "We handle the cross-border payment so you transact only in your local currency — transparent, fast and secure.", points: ["Live exchange rates", "No hidden FX fees", "Documented receipts"] },
+  { image: sourcingImg, title: "Vendor Sourcing", desc: "We tap into our network of vetted Nigerian suppliers to find the exact product you need — at the right quality and price.", points: ["Curated vendor shortlists", "Wholesale & retail options", "Negotiation on your behalf"] },
+  { image: verificationImg, title: "Product Verification", desc: "Before anything ships, our team physically inspects every item to confirm authenticity, condition and accuracy of your order.", points: ["Photo & video proof", "Quality checks", "Authenticity confirmation"] },
+  { image: logisticsImg, title: "Logistics & Cargo Coordination", desc: "End-to-end cargo management from packaging in Nigeria to arrival in Kenya, with clear tracking throughout.", points: ["Air & sea cargo", "Customs handling", "Insurance options"] },
+  { image: pickupImg, title: "Pickup & Drop-Off Services", desc: "Convenient collection at our Kenyan drop-off points or doorstep delivery anywhere in the country.", points: ["Nairobi CBD hub", "Nationwide courier", "Doorstep delivery"] },
+  { image: paymentImg, title: "Payment Facilitation (KES ↔ NGN)", desc: "We handle the cross-border payment so you transact only in your local currency — transparent, fast and secure.", points: ["Live exchange rates", "No hidden FX fees", "Documented receipts"] },
 ];
 
 function Services() {

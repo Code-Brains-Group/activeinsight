@@ -25,8 +25,8 @@ import orgShea from "@/assets/items/org-shea.jpg";
 import orgBlacksoap from "@/assets/newImages/blackSoap.jpeg";
 import orgCocoa from "@/assets/items/org-cocoa.jpg";
 import orgCoconut from "@/assets/items/org-coconut.jpg";
-import orgMoringa from "@/assets/items/org-moringa.jpg";
-import orgHoney from "@/assets/items/org-honey.jpg";
+import orgEssentialOils from "@/assets/newImages/essentialOils.jpg";
+import orgHairOils from "@/assets/newImages/hairOils.jpg";
 
 import jewCoral from "@/assets/items/jew-coral.jpg";
 import jewNecklace from "@/assets/items/jew-necklace.jpg";
@@ -37,7 +37,7 @@ import jewHandbag from "@/assets/newImages/rattanBag.jpeg";
 
 import rtwAnkara from "@/assets/items/rtw-ankara-maxi.jpg";
 import rtwAgbada from "@/assets/items/rtw-agbada.jpg";
-import rtwSenator from "@/assets/items/rtw-senator.jpg";
+import rtwSenator from "@/assets/newImages/senatorWear.jpg";
 import rtwAsoebi from "@/assets/items/rtw-asoebi.jpg";
 import rtwKaftan from "@/assets/items/rtw-kaftan.jpg";
 import rtwKids from "@/assets/items/rtw-kids.jpg";
@@ -114,8 +114,8 @@ export const categories: Category[] = [
       { name: "African Black Soap", desc: "Traditional Dudu-Osun style, plantain ash and palm.", image: orgBlacksoap },
       { name: "Pure Cocoa Butter", desc: "Cold-pressed cocoa butter blocks and tubs.", image: orgCocoa },
       { name: "Cold-Pressed Coconut Oil", desc: "Virgin coconut oil for skin, hair and cooking.", image: orgCoconut },
-      { name: "Essential Oils", desc: "Lavender, tea tree, eucalyptus and peppermint essential oils.", image: orgMoringa },
-      { name: "Natural Hair Oils", desc: "Castor, argan and jojoba oil blends for hair and scalp.", image: orgHoney },
+      { name: "Essential Oils", desc: "Lavender, tea tree, eucalyptus and peppermint essential oils.", image: orgEssentialOils },
+      { name: "Natural Hair Oils", desc: "Castor, argan and jojoba oil blends for hair and scalp.", image: orgHairOils },
     ],
   },
   {

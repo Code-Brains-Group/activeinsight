@@ -13,7 +13,6 @@ import hairHd from "@/assets/items/hair-hd-frontal.jpg";
 import hairBody from "@/assets/items/hair-body-wave.jpg";
 import hairClosure from "@/assets/items/hair-closure.jpg";
 import hairPixie from "@/assets/items/hair-pixie.jpg";
-import hairBonnets from "@/assets/items/hair-bonnets.jpg";
 
 import cosFoundation from "@/assets/items/cos-foundation.jpg";
 import cosLipsticks from "@/assets/items/cos-lipsticks.jpg";
@@ -50,13 +49,13 @@ import fabGeorge from "@/assets/newImages/fabrics/georgefabric.jpeg";
 import fabAkwete from "@/assets/newImages/fabrics/akwete.jpeg";
 import fabDamask from "@/assets/newImages/fabrics/damask.jpeg";
 
-import foodGarri from "@/assets/items/food-garri.jpg";
-import foodEgusi from "@/assets/items/food-egusi.jpg";
+import foodGarri from "@/assets/newImages/ijebuGarri.jpeg";
+import foodEgusi from "@/assets/newImages/Egusi.jpeg";
 import foodPalm from "@/assets/newImages/palmOil.png";
-import foodOgbono from "@/assets/items/food-ogbono.jpg";
-import foodCrayfish from "@/assets/items/food-crayfish.jpg";
-import foodSuya from "@/assets/items/food-suya.jpg";
-import foodStockfish from "@/assets/items/food-stockfish.jpg";
+import foodOgbono from "@/assets/newImages/ogbono.jpeg";
+import foodCrayfish from "@/assets/newImages/crayfish.jpeg";
+// import foodSuya from "@/assets/items/food-suya.jpg";
+import foodStockfish from "@/assets/newImages/stockfish.jpeg";
 
 import whlHair from "@/assets/items/whl-hair.jpg";
 import whlBoutique from "@/assets/items/whl-boutique.jpg";
@@ -89,7 +88,6 @@ export const categories: Category[] = [
       { name: "Brazilian Body Wave", desc: "Soft body-wave bundles, tangle-free, dye-able to #613.", image: hairBody },
       { name: "Closure Wigs (4x4)", desc: "Beginner-friendly closures, breathable Swiss lace.", image: hairClosure },
       { name: "Pixie Cut Wigs", desc: "Ready-to-wear short pixie styles in natural colours.", image: hairPixie },
-      { name: "Braids and Wigs", desc: "Box braids, cornrows, knotless braids and lace-front wigs in various styles.", image: hairBonnets },
     ],
   },
   {
@@ -173,7 +171,7 @@ export const categories: Category[] = [
       { name: "Red Palm Oil", desc: "Authentic Nigerian red palm oil, unrefined.", image: foodPalm },
       { name: "Ogbono Seeds", desc: "Wild mango seeds for draw soup.", image: foodOgbono },
       { name: "Crayfish (Dried & Ground)", desc: "Premium dried crayfish, finely ground.", image: foodCrayfish },
-      { name: "Suya Spice Mix", desc: "Authentic yaji suya pepper blend.", image: foodSuya },
+      // { name: "Suya Spice Mix", desc: "Authentic yaji suya pepper blend.", image: foodSuya },
       { name: "Dried Stockfish & Bitter Leaf", desc: "Pantry staples vacuum-sealed for freshness.", image: foodStockfish },
     ],
   },

@@ -37,7 +37,7 @@ const steps = [
 
 const reasons = [
   { icon: BadgeCheck, title: "Authentic Products", desc: "Verified sourcing from established Nigerian vendors only." },
-  { icon: Sparkles, title: "Premium Service", desc: "White-glove handling from request to delivery." },
+  { icon: Sparkles, title: "Premium Service", desc: "Professional handling from request to delivery." },
   { icon: Clock, title: "Reliable Timelines", desc: "Transparent shipping schedules you can plan around." },
 ];
 

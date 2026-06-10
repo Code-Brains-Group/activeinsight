@@ -40,9 +40,9 @@ export function Footer() {
         <div>
           <h4 className="text-gold text-sm uppercase tracking-widest mb-4">Contact</h4>
           <ul className="space-y-3 text-sm text-cream/70">
-            <li className="flex gap-2"><MapPin className="h-4 w-4 text-gold mt-0.5" /> Surulere & Abule Egba, Lagos · Ngong Road, Nairobi</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 text-gold mt-0.5" /> +254 100 730 474</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 text-gold mt-0.5" /> hello@activeinsight.co</li>
+            <li className="flex gap-2"><MapPin className="h-4 w-4 text-gold mt-0.5" /><span>Surulere & Abule Egba, Lagos · Ngong Road, Nairobi</span></li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 text-gold mt-0.5" /><span>+254 100 730 474</span></li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 text-gold mt-0.5" /><span>hello@activeinsight.co</span></li>
           </ul>
           <div className="flex gap-3 mt-5">
             <a href="#" aria-label="Facebook" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Facebook className="h-4 w-4" /></a>

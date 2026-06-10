@@ -43,12 +43,12 @@ import rtwAsoebi from "@/assets/items/rtw-asoebi.jpg";
 import rtwKaftan from "@/assets/items/rtw-kaftan.jpg";
 import rtwKids from "@/assets/items/rtw-kids.jpg";
 
-import fabHollandais from "@/assets/items/fab-hollandais.jpg";
-import fabAdire from "@/assets/items/fab-adire.jpg";
-import fabAsooke from "@/assets/items/fab-asooke.jpg";
-import fabGeorge from "@/assets/items/fab-george.jpg";
-import fabLace from "@/assets/items/fab-lace.jpg";
-import fabDamask from "@/assets/items/fab-damask.jpg";
+import fabHollandais from "@/assets/newImages/fabrics/ankara.jpeg";
+import fabAdire from "@/assets/newImages/fabrics/adire.jpeg";
+import fabAsooke from "@/assets/newImages/fabrics/asooke.jpeg";
+import fabGeorge from "@/assets/newImages/fabrics/georgefabric.jpeg";
+import fabAkwete from "@/assets/newImages/fabrics/akwete.jpeg";
+import fabDamask from "@/assets/newImages/fabrics/damask.jpeg";
 
 import foodGarri from "@/assets/items/food-garri.jpg";
 import foodEgusi from "@/assets/items/food-egusi.jpg";
@@ -154,12 +154,12 @@ export const categories: Category[] = [
     desc: "Ankara, Adire, Aso-Oke — by the yard or in bulk.",
     image: catFabrics,
     items: [
-      { name: "Hollandais Wax Ankara", desc: "Authentic Hollandais wax prints, 6-yard pieces.", image: fabHollandais },
-      { name: "Adire Tie-Dye Fabric", desc: "Hand-dyed indigo Adire from Abeokuta.", image: fabAdire },
-      { name: "Aso-Oke (Bridal)", desc: "Handwoven Aso-Oke for bridal headties and wrappers.", image: fabAsooke },
-      { name: "George Wrapper", desc: "Indian George fabric in deep jewel tones.", image: fabGeorge },
-      { name: "Lace & Sequin Fabric", desc: "Heavy beaded lace for occasion wear.", image: fabLace },
-      { name: "Damask Materials", desc: "Premium damask in solid colours by the yard.", image: fabDamask },
+      { name: "Ankara", desc: "Authentic Ankara wax prints, 6-yard pieces in bold patterns.", image: fabHollandais },
+      { name: "Adire", desc: "Hand-dyed indigo Adire from Abeokuta.", image: fabAdire },
+      { name: "Aso-Oke", desc: "Handwoven Aso-Oke for bridal headties and wrappers.", image: fabAsooke },
+      { name: "George Fabric", desc: "Indian George fabric in deep jewel tones.", image: fabGeorge },
+      { name: "Akwete", desc: "Handwoven Akwete cloth from south-eastern Nigeria.", image: fabAkwete },
+      { name: "Damask", desc: "Premium damask in solid colours by the yard.", image: fabDamask },
     ],
   },
   {

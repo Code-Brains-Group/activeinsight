@@ -154,12 +154,12 @@ export const categories: Category[] = [
     desc: "Ankara, Adire, Aso-Oke — by the yard or in bulk.",
     image: catFabrics,
     items: [
-      { name: "Hollandais Wax Ankara", desc: "Authentic Hollandais wax prints, 6-yard pieces.", image: fabHollandais },
-      { name: "Adire Tie-Dye Fabric", desc: "Hand-dyed indigo Adire from Abeokuta.", image: fabAdire },
-      { name: "Aso-Oke (Bridal)", desc: "Handwoven Aso-Oke for bridal headties and wrappers.", image: fabAsooke },
-      { name: "George Wrapper", desc: "Indian George fabric in deep jewel tones.", image: fabGeorge },
-      { name: "Lace & Sequin Fabric", desc: "Heavy beaded lace for occasion wear.", image: fabLace },
-      { name: "Damask Materials", desc: "Premium damask in solid colours by the yard.", image: fabDamask },
+      { name: "Ankara", desc: "Authentic Ankara wax prints, 6-yard pieces in bold patterns.", image: fabHollandais },
+      { name: "Adire", desc: "Hand-dyed indigo Adire from Abeokuta.", image: fabAdire },
+      { name: "Aso-Oke", desc: "Handwoven Aso-Oke for bridal headties and wrappers.", image: fabAsooke },
+      { name: "George Fabric", desc: "Indian George fabric in deep jewel tones.", image: fabGeorge },
+      { name: "Akwete", desc: "Handwoven Akwete cloth from south-eastern Nigeria.", image: fabAkwete },
+      { name: "Damask", desc: "Premium damask in solid colours by the yard.", image: fabDamask },
     ],
   },
   {

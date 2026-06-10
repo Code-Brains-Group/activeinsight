@@ -52,7 +52,7 @@ import fabDamask from "@/assets/items/fab-damask.jpg";
 
 import foodGarri from "@/assets/items/food-garri.jpg";
 import foodEgusi from "@/assets/items/food-egusi.jpg";
-import foodPalm from "@/assets/items/food-palm.jpg";
+import foodPalm from "@/assets/items/newImages/palmOil.png";
 import foodOgbono from "@/assets/items/food-ogbono.jpg";
 import foodCrayfish from "@/assets/items/food-crayfish.jpg";
 import foodSuya from "@/assets/items/food-suya.jpg";

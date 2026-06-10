@@ -23,7 +23,7 @@ import cosPerfume from "@/assets/items/cos-perfume.jpg";
 import cosLashes from "@/assets/items/cos-lashes.jpg";
 
 import orgShea from "@/assets/items/org-shea.jpg";
-import orgBlacksoap from "@/assets/items/org-blacksoap.jpg";
+import orgBlacksoap from "@/assets/items/newImages/blackSoap.jpeg";
 import orgCocoa from "@/assets/items/org-cocoa.jpg";
 import orgCoconut from "@/assets/items/org-coconut.jpg";
 import orgMoringa from "@/assets/items/org-moringa.jpg";
@@ -34,7 +34,7 @@ import jewNecklace from "@/assets/items/jew-necklace.jpg";
 import jewWaist from "@/assets/items/jew-waist.jpg";
 import jewCuffs from "@/assets/items/jew-cuffs.jpg";
 import jewFan from "@/assets/items/jew-fan.jpg";
-import jewHandbag from "@/assets/items/jew-handbag.jpg";
+import jewHandbag from "@/assets/items/newImages/rattanBag.jpeg";
 
 import rtwAnkara from "@/assets/items/rtw-ankara-maxi.jpg";
 import rtwAgbada from "@/assets/items/rtw-agbada.jpg";

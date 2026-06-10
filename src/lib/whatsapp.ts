@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "254100730474";
+export const WHATSAPP_NUMBER = "+254100730474";
 
 export function getWhatsAppUrl(message = "Hello Active Insight, I'd like to enquire.") {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

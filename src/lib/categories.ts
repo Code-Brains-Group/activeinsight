@@ -43,12 +43,12 @@ import rtwAsoebi from "@/assets/items/rtw-asoebi.jpg";
 import rtwKaftan from "@/assets/items/rtw-kaftan.jpg";
 import rtwKids from "@/assets/items/rtw-kids.jpg";
 
-import fabHollandais from "@/assets/items/fab-hollandais.jpg";
-import fabAdire from "@/assets/items/fab-adire.jpg";
-import fabAsooke from "@/assets/items/fab-asooke.jpg";
-import fabGeorge from "@/assets/items/fab-george.jpg";
-import fabLace from "@/assets/items/fab-lace.jpg";
-import fabDamask from "@/assets/items/fab-damask.jpg";
+import fabHollandais from "@/assets/newImages/fabrics/ankara.jpeg";
+import fabAdire from "@/assets/newImages/fabrics/adire.jpeg";
+import fabAsooke from "@/assets/newImages/fabrics/asooke.jpeg";
+import fabGeorge from "@/assets/newImages/fabrics/georgefabric.jpeg";
+import fabAkwete from "@/assets/newImages/fabrics/akwete.jpeg";
+import fabDamask from "@/assets/newImages/fabrics/damask.jpeg";
 
 import foodGarri from "@/assets/items/food-garri.jpg";
 import foodEgusi from "@/assets/items/food-egusi.jpg";

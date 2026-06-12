@@ -52,9 +52,9 @@ function Index() {
         <div className="container-luxe relative py-28 md:py-40 max-w-4xl">
           <p className="text-base md:text-xl uppercase tracking-[0.35em] text-gold mb-6 reveal flex items-center gap-3 font-medium">
             <span>Nigeria</span>
-            <span className="text-4xl md:text-5xl leading-none" aria-hidden>🇳🇬</span>
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f1f3-1f1ec.svg" alt="Nigeria flag" className="h-8 md:h-10 w-auto" />
             <span className="text-gold/70">↔</span>
-            <span className="text-4xl md:text-5xl leading-none" aria-hidden>🇰🇪</span>
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f1f0-1f1ea.svg" alt="Kenya flag" className="h-8 md:h-10 w-auto" />
             <span>Kenya</span>
           </p>
           <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] text-cream reveal" style={{ animationDelay: "0.1s" }}>

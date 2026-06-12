@@ -129,20 +129,7 @@ function Index() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="bg-secondary/40 py-24">
-        <div className="container-luxe">
-          <SectionHeader eyebrow="How It Works" title="Five steps. Total confidence." />
-          <div className="grid gap-8 md:grid-cols-5 relative">
-            {steps.map((step, i) => (
-              <div key={i} className="relative text-center">
-                <div className="mx-auto h-16 w-16 rounded-full bg-ink text-gold font-serif text-2xl grid place-items-center">{i + 1}</div>
-                <p className="mt-5 text-sm text-ink leading-relaxed">{step}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* WHY CHOOSE US */}
       <section className="container-luxe py-24 grid lg:grid-cols-2 gap-16 items-center">

@@ -23,6 +23,14 @@ const blocks = [
   { icon: Handshake, title: "Trust & Reliability", text: "Verified vendors, inspected products, transparent pricing, and a single point of accountability. Your shipment is our reputation." },
 ];
 
+const steps = [
+  "Send us your product request",
+  "We source & verify from trusted vendors",
+  "Payment facilitation & confirmation",
+  "Cargo coordination & shipping begins",
+  "Pickup, delivery or Lagos drop-off coordination",
+];
+
 function About() {
   return (
     <>

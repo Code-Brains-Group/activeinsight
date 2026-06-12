@@ -28,13 +28,8 @@ const services = [
   { icon: Wallet, title: "Payment Facilitation", desc: "Seamless KES ↔ NGN payment handling with full transparency." },
 ];
 
-const steps = [
-  "Send us your product request",
-  "We source & verify from trusted vendors",
-  "Payment facilitation & confirmation",
-  "Cargo coordination & shipping begins",
-  "Pickup, delivery or Lagos drop-off coordination",
-];
+
+
 
 const reasons = [
   { icon: BadgeCheck, title: "Authentic Products", desc: "Verified sourcing from established Nigerian vendors only." },

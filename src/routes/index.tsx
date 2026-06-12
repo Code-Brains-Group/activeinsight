@@ -4,6 +4,7 @@ import logistics from "@/assets/logistics.jpg";
 import { SectionHeader } from "@/components/site/Section";
 import { ArrowRight, Search, ShieldCheck, Ship, MapPin, Wallet, Sparkles, BadgeCheck, Clock } from "lucide-react";
 import { quoteWhatsAppUrl } from "@/lib/whatsapp";
+import { categories } from "@/lib/categories";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,13 +28,8 @@ const services = [
   { icon: Wallet, title: "Payment Facilitation", desc: "Seamless KES ↔ NGN payment handling with full transparency." },
 ];
 
-const steps = [
-  "Send us your product request",
-  "We source & verify from trusted vendors",
-  "Payment facilitation & confirmation",
-  "Cargo coordination & shipping begins",
-  "Pickup, delivery or Lagos drop-off coordination",
-];
+
+
 
 const reasons = [
   { icon: BadgeCheck, title: "Authentic Products", desc: "Verified sourcing from established Nigerian vendors only." },
@@ -51,9 +47,9 @@ function Index() {
         <div className="container-luxe relative py-28 md:py-40 max-w-4xl">
           <p className="text-base md:text-xl uppercase tracking-[0.35em] text-gold mb-6 reveal flex items-center gap-3 font-medium">
             <span>Nigeria</span>
-            <span className="text-4xl md:text-5xl leading-none" aria-hidden>🇳🇬</span>
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f1f3-1f1ec.svg" alt="Nigeria flag" className="h-8 md:h-10 w-auto" />
             <span className="text-gold/70">↔</span>
-            <span className="text-4xl md:text-5xl leading-none" aria-hidden>🇰🇪</span>
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f1f0-1f1ea.svg" alt="Kenya flag" className="h-8 md:h-10 w-auto" />
             <span>Kenya</span>
           </p>
           <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] text-cream reveal" style={{ animationDelay: "0.1s" }}>
@@ -75,6 +71,36 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* WHAT WE SOURCE */}
+      <section className="bg-secondary/40 py-24">
+        <div className="container-luxe">
+          <SectionHeader eyebrow="What We Source" title="Categories we deliver from Nigeria" intro="Browse the product categories our clients ask for most." />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {categories.map((c) => (
+              <Link
+                key={c.slug}
+                to="/what-we-source/$slug"
+                params={{ slug: c.slug }}
+                className="group relative block overflow-hidden shadow-luxe"
+              >
+                <img src={c.image} alt={c.title} className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <h3 className="font-serif text-xl text-cream">{c.title}</h3>
+                  <p className="text-xs text-cream/70 mt-1 line-clamp-2">{c.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link to="/what-we-source" className="inline-flex items-center gap-2 text-ink border-b border-gold pb-1 hover:text-gold">
+              View all categories <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
 
       {/* SERVICES */}
       <section className="container-luxe py-24">
@@ -98,20 +124,7 @@ function Index() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="bg-secondary/40 py-24">
-        <div className="container-luxe">
-          <SectionHeader eyebrow="How It Works" title="Five steps. Total confidence." />
-          <div className="grid gap-8 md:grid-cols-5 relative">
-            {steps.map((step, i) => (
-              <div key={i} className="relative text-center">
-                <div className="mx-auto h-16 w-16 rounded-full bg-ink text-gold font-serif text-2xl grid place-items-center">{i + 1}</div>
-                <p className="mt-5 text-sm text-ink leading-relaxed">{step}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* WHY CHOOSE US */}
       <section className="container-luxe py-24 grid lg:grid-cols-2 gap-16 items-center">

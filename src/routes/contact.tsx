@@ -89,11 +89,11 @@ function Contact() {
 
           <div className="flex justify-center gap-3">
             {[
-              { label: "Facebook", Icon: Facebook },
-              { label: "Instagram", Icon: Instagram },
-              { label: "TikTok", Icon: Music2 },
-            ].map(({ label, Icon }) => (
-              <a key={label} href="#" aria-label={label} className="h-10 w-10 grid place-items-center border border-ink hover:bg-ink hover:text-cream transition-colors"><Icon className="h-4 w-4" /></a>
+              { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61589431627620&_rdc=1&_rdr#", Icon: Facebook },
+              { label: "Instagram", href: "https://www.instagram.com/activeinsight_", Icon: Instagram },
+              { label: "TikTok", href: "https://www.tiktok.com/@activeinsight_", Icon: Music2 },
+            ].map(({ label, href, Icon }) => (
+              <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} className="h-10 w-10 grid place-items-center border border-ink hover:bg-ink hover:text-cream transition-colors"><Icon className="h-4 w-4" /></a>
             ))}
           </div>
         </aside>

@@ -45,9 +45,9 @@ export function Footer() {
             <li className="flex gap-2"><Mail className="h-4 w-4 text-gold mt-0.5" /><span>hello@activeinsight.co</span></li>
           </ul>
           <div className="flex gap-3 mt-5">
-            <a href="#" aria-label="Facebook" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Facebook className="h-4 w-4" /></a>
-            <a href="#" aria-label="Instagram" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Instagram className="h-4 w-4" /></a>
-            <a href="#" aria-label="TikTok" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Music2 className="h-4 w-4" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61589431627620&_rdc=1&_rdr#" target="_blank" rel="noreferrer" aria-label="Facebook" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Facebook className="h-4 w-4" /></a>
+            <a href="https://www.instagram.com/activeinsight_" target="_blank" rel="noreferrer" aria-label="Instagram" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Instagram className="h-4 w-4" /></a>
+            <a href="https://www.tiktok.com/@activeinsight_" target="_blank" rel="noreferrer" aria-label="TikTok" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Music2 className="h-4 w-4" /></a>
           </div>
         </div>
       </div>

@@ -74,9 +74,9 @@ function Contact() {
         </div>
 
         <aside className="lg:col-span-2 space-y-6">
+          <InfoCard icon={MapPin} title="Nairobi Pickup">Western Delicacies Restaurant on Ngong Road. After City Mortuary, beside ThemeWood Furniture, opposite Nairobi Baptist, Nairobi, Kenya.</InfoCard>
           <InfoCard icon={MapPin} title="Surulere Drop-Off & Pickup">22, Oladimeji Street, Aguda - Surulere, Lagos, Nigeria</InfoCard>
           <InfoCard icon={MapPin} title="Abule Egba Drop-Off">10, Emmanuel Collage Mosalasi, Alagbado, Lagos, Nigeria</InfoCard>
-          <InfoCard icon={MapPin} title="Nairobi Pickup">Western Delicacies Restaurant on Ngong Road. After City Mortuary, beside ThemeWood Furniture, opposite Nairobi Baptist, Nairobi, Kenya.</InfoCard>
           <InfoCard icon={Phone} title="Phone / WhatsApp">+254 100 730 474</InfoCard>
           <InfoCard icon={Mail} title="Email">hello@activeinsight.co</InfoCard>
           <InfoCard icon={Clock} title="Business Hours">Mon–Fri · 8am–6pm EAT<br />Sat · 9am–2pm EAT</InfoCard>

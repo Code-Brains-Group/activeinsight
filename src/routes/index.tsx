@@ -4,6 +4,7 @@ import logistics from "@/assets/logistics.jpg";
 import { SectionHeader } from "@/components/site/Section";
 import { ArrowRight, Search, ShieldCheck, Ship, MapPin, Wallet, Sparkles, BadgeCheck, Clock } from "lucide-react";
 import { quoteWhatsAppUrl } from "@/lib/whatsapp";
+import { categories } from "@/lib/categories";
 
 export const Route = createFileRoute("/")({
   head: () => ({

@@ -77,6 +77,36 @@ function Index() {
         </div>
       </section>
 
+      {/* WHAT WE SOURCE */}
+      <section className="bg-secondary/40 py-24">
+        <div className="container-luxe">
+          <SectionHeader eyebrow="What We Source" title="Categories we deliver from Nigeria" intro="Browse the product categories our clients ask for most." />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {categories.map((c) => (
+              <Link
+                key={c.slug}
+                to="/what-we-source/$slug"
+                params={{ slug: c.slug }}
+                className="group relative block overflow-hidden shadow-luxe"
+              >
+                <img src={c.image} alt={c.title} className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <h3 className="font-serif text-xl text-cream">{c.title}</h3>
+                  <p className="text-xs text-cream/70 mt-1 line-clamp-2">{c.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link to="/what-we-source" className="inline-flex items-center gap-2 text-ink border-b border-gold pb-1 hover:text-gold">
+              View all categories <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
       {/* SERVICES */}
       <section className="container-luxe py-24">
         <SectionHeader eyebrow="What We Do" title="A complete cross-border trade partner" intro="From sourcing to last-mile delivery, we handle every link of the chain so you don't have to." />

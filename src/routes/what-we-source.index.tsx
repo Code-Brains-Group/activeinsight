@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
 import { categories } from "@/lib/categories";
 import { ArrowRight } from "lucide-react";
+import { quoteWhatsAppUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/what-we-source/")({
   head: () => ({
@@ -53,7 +54,7 @@ function WhatWeSource() {
         </div>
         <div className="text-center mt-16">
           <p className="text-muted-foreground mb-5">Looking for something else? We source on request.</p>
-          <Link to="/quote" className="inline-flex bg-ink text-cream px-8 py-3.5 hover:bg-ink/90">Request a custom item</Link>
+          <a href={quoteWhatsAppUrl} target="_blank" rel="noreferrer" className="inline-flex bg-ink text-cream px-8 py-3.5 hover:bg-ink/90">Request a custom item</a>
         </div>
       </section>
     </>

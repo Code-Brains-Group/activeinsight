@@ -4,7 +4,7 @@ import catOrganic from "@/assets/cat-organic.jpg";
 import catJewelry from "@/assets/cat-jewelry.jpg";
 import catRtw from "@/assets/cat-rtw.jpg";
 import catFabrics from "@/assets/cat-fabrics.jpg";
-import catFood from "@/assets/cat-food.jpg";
+import catFood from "@/assets/newImages/nigerianFoods.jpeg";
 import catWholesale from "@/assets/cat-wholesale.jpg";
 
 // Item images
@@ -13,7 +13,6 @@ import hairHd from "@/assets/items/hair-hd-frontal.jpg";
 import hairBody from "@/assets/items/hair-body-wave.jpg";
 import hairClosure from "@/assets/items/hair-closure.jpg";
 import hairPixie from "@/assets/items/hair-pixie.jpg";
-import hairBonnets from "@/assets/items/hair-bonnets.jpg";
 
 import cosFoundation from "@/assets/items/cos-foundation.jpg";
 import cosLipsticks from "@/assets/items/cos-lipsticks.jpg";
@@ -23,47 +22,45 @@ import cosPerfume from "@/assets/items/cos-perfume.jpg";
 import cosLashes from "@/assets/items/cos-lashes.jpg";
 
 import orgShea from "@/assets/items/org-shea.jpg";
-import orgBlacksoap from "@/assets/items/org-blacksoap.jpg";
+import orgBlacksoap from "@/assets/newImages/blackSoap.jpeg";
 import orgCocoa from "@/assets/items/org-cocoa.jpg";
 import orgCoconut from "@/assets/items/org-coconut.jpg";
-import orgMoringa from "@/assets/items/org-moringa.jpg";
-import orgHoney from "@/assets/items/org-honey.jpg";
+import orgEssentialOils from "@/assets/newImages/essentialOils.jpg";
+import orgHairOils from "@/assets/newImages/hairOils.jpg";
 
 import jewCoral from "@/assets/items/jew-coral.jpg";
 import jewNecklace from "@/assets/items/jew-necklace.jpg";
 import jewWaist from "@/assets/items/jew-waist.jpg";
 import jewCuffs from "@/assets/items/jew-cuffs.jpg";
 import jewFan from "@/assets/items/jew-fan.jpg";
-import jewHandbag from "@/assets/items/jew-handbag.jpg";
+import jewHandbag from "@/assets/newImages/rattanBag.jpeg";
 
 import rtwAnkara from "@/assets/items/rtw-ankara-maxi.jpg";
 import rtwAgbada from "@/assets/items/rtw-agbada.jpg";
-import rtwSenator from "@/assets/items/rtw-senator.jpg";
+import rtwSenator from "@/assets/newImages/senatorWear.jpg";
 import rtwAsoebi from "@/assets/items/rtw-asoebi.jpg";
 import rtwKaftan from "@/assets/items/rtw-kaftan.jpg";
 import rtwKids from "@/assets/items/rtw-kids.jpg";
 
-import fabHollandais from "@/assets/items/fab-hollandais.jpg";
-import fabAdire from "@/assets/items/fab-adire.jpg";
-import fabAsooke from "@/assets/items/fab-asooke.jpg";
-import fabGeorge from "@/assets/items/fab-george.jpg";
-import fabLace from "@/assets/items/fab-lace.jpg";
-import fabDamask from "@/assets/items/fab-damask.jpg";
+import fabHollandais from "@/assets/newImages/fabrics/ankara.jpeg";
+import fabAdire from "@/assets/newImages/fabrics/adire.jpeg";
+import fabAsooke from "@/assets/newImages/fabrics/asooke.jpeg";
+import fabGeorge from "@/assets/newImages/fabrics/georgefabric.jpeg";
+import fabAkwete from "@/assets/newImages/fabrics/akwete.jpeg";
+import fabDamask from "@/assets/newImages/fabrics/damask.jpeg";
 
-import foodGarri from "@/assets/items/food-garri.jpg";
-import foodEgusi from "@/assets/items/food-egusi.jpg";
-import foodPalm from "@/assets/items/food-palm.jpg";
-import foodOgbono from "@/assets/items/food-ogbono.jpg";
-import foodCrayfish from "@/assets/items/food-crayfish.jpg";
-import foodSuya from "@/assets/items/food-suya.jpg";
-import foodStockfish from "@/assets/items/food-stockfish.jpg";
+import foodGarri from "@/assets/newImages/ijebuGarri.jpeg";
+import foodEgusi from "@/assets/newImages/Egusi.jpeg";
+import foodPalm from "@/assets/newImages/palmOil.png";
+import foodOgbono from "@/assets/newImages/ogbono.jpeg";
+import foodCrayfish from "@/assets/newImages/crayfish.jpeg";
+// import foodSuya from "@/assets/items/food-suya.jpg";
+import foodStockfish from "@/assets/newImages/stockfish.jpeg";
 
 import whlHair from "@/assets/items/whl-hair.jpg";
 import whlBoutique from "@/assets/items/whl-boutique.jpg";
 import whlCosmetics from "@/assets/items/whl-cosmetics.jpg";
 import whlFood from "@/assets/items/whl-food.jpg";
-import whlPrivate from "@/assets/items/whl-private.jpg";
-import whlSample from "@/assets/items/whl-sample.jpg";
 
 export interface CategoryItem {
   name: string;
@@ -91,7 +88,6 @@ export const categories: Category[] = [
       { name: "Brazilian Body Wave", desc: "Soft body-wave bundles, tangle-free, dye-able to #613.", image: hairBody },
       { name: "Closure Wigs (4x4)", desc: "Beginner-friendly closures, breathable Swiss lace.", image: hairClosure },
       { name: "Pixie Cut Wigs", desc: "Ready-to-wear short pixie styles in natural colours.", image: hairPixie },
-      { name: "Braids and Wigs", desc: "Box braids, cornrows, knotless braids and lace-front wigs in various styles.", image: hairBonnets },
     ],
   },
   {
@@ -118,8 +114,8 @@ export const categories: Category[] = [
       { name: "African Black Soap", desc: "Traditional Dudu-Osun style, plantain ash and palm.", image: orgBlacksoap },
       { name: "Pure Cocoa Butter", desc: "Cold-pressed cocoa butter blocks and tubs.", image: orgCocoa },
       { name: "Cold-Pressed Coconut Oil", desc: "Virgin coconut oil for skin, hair and cooking.", image: orgCoconut },
-      { name: "Essential Oils", desc: "Lavender, tea tree, eucalyptus and peppermint essential oils.", image: orgMoringa },
-      { name: "Natural Hair Oils", desc: "Castor, argan and jojoba oil blends for hair and scalp.", image: orgHoney },
+      { name: "Essential Oils", desc: "Lavender, tea tree, eucalyptus and peppermint essential oils.", image: orgEssentialOils },
+      { name: "Natural Hair Oils", desc: "Castor, argan and jojoba oil blends for hair and scalp.", image: orgHairOils },
     ],
   },
   {
@@ -156,12 +152,12 @@ export const categories: Category[] = [
     desc: "Ankara, Adire, Aso-Oke — by the yard or in bulk.",
     image: catFabrics,
     items: [
-      { name: "Hollandais Wax Ankara", desc: "Authentic Hollandais wax prints, 6-yard pieces.", image: fabHollandais },
-      { name: "Adire Tie-Dye Fabric", desc: "Hand-dyed indigo Adire from Abeokuta.", image: fabAdire },
-      { name: "Aso-Oke (Bridal)", desc: "Handwoven Aso-Oke for bridal headties and wrappers.", image: fabAsooke },
-      { name: "George Wrapper", desc: "Indian George fabric in deep jewel tones.", image: fabGeorge },
-      { name: "Lace & Sequin Fabric", desc: "Heavy beaded lace for occasion wear.", image: fabLace },
-      { name: "Damask Materials", desc: "Premium damask in solid colours by the yard.", image: fabDamask },
+      { name: "Ankara", desc: "Authentic Ankara wax prints, 6-yard pieces in bold patterns.", image: fabHollandais },
+      { name: "Adire", desc: "Hand-dyed indigo Adire from Abeokuta.", image: fabAdire },
+      { name: "Aso-Oke", desc: "Handwoven Aso-Oke for bridal headties and wrappers.", image: fabAsooke },
+      { name: "George Fabric", desc: "Indian George fabric in deep jewel tones.", image: fabGeorge },
+      { name: "Akwete", desc: "Handwoven Akwete cloth from south-eastern Nigeria.", image: fabAkwete },
+      { name: "Damask", desc: "Premium damask in solid colours by the yard.", image: fabDamask },
     ],
   },
   {
@@ -175,7 +171,6 @@ export const categories: Category[] = [
       { name: "Red Palm Oil", desc: "Authentic Nigerian red palm oil, unrefined.", image: foodPalm },
       { name: "Ogbono Seeds", desc: "Wild mango seeds for draw soup.", image: foodOgbono },
       { name: "Crayfish (Dried & Ground)", desc: "Premium dried crayfish, finely ground.", image: foodCrayfish },
-      { name: "Suya Spice Mix", desc: "Authentic yaji suya pepper blend.", image: foodSuya },
       { name: "Dried Stockfish & Bitter Leaf", desc: "Pantry staples vacuum-sealed for freshness.", image: foodStockfish },
     ],
   },
@@ -189,8 +184,6 @@ export const categories: Category[] = [
       { name: "Boutique Restock Packages", desc: "Curated RTW and accessory restock bundles.", image: whlBoutique },
       { name: "Wholesale Cosmetics Cartons", desc: "Sealed cartons direct from Nigerian beauty brands.", image: whlCosmetics },
       { name: "Mixed Foodstuff Containers", desc: "Container-load sourcing for African food shops.", image: whlFood },
-      { name: "Private-Label Sourcing", desc: "We help you brand and source your own line.", image: whlPrivate },
-      { name: "Sample Sourcing", desc: "Order single units to test before going bulk.", image: whlSample },
     ],
   },
 ];

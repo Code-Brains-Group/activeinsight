@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import logoAsset from "@/assets/logo.jpg.asset.json";
-const logo = logoAsset.url;
+import { Facebook, Instagram, Mail, Music2, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/newImages/activeLogo.jpeg";
+import { quoteWhatsAppUrl } from "@/lib/whatsapp";
 
 export function Footer() {
   return (
@@ -24,7 +24,7 @@ export function Footer() {
             <li><Link to="/how-it-works" className="hover:text-gold">How It Works</Link></li>
             <li><Link to="/pricing" className="hover:text-gold">Pricing</Link></li>
             <li><Link to="/faq" className="hover:text-gold">FAQ</Link></li>
-            <li><Link to="/quote" className="hover:text-gold">Request a Quote</Link></li>
+            <li><a href={quoteWhatsAppUrl} target="_blank" rel="noreferrer" className="hover:text-gold">Request a Quote</a></li>
           </ul>
         </div>
         <div>
@@ -40,15 +40,14 @@ export function Footer() {
         <div>
           <h4 className="text-gold text-sm uppercase tracking-widest mb-4">Contact</h4>
           <ul className="space-y-3 text-sm text-cream/70">
-            <li className="flex gap-2"><MapPin className="h-4 w-4 text-gold mt-0.5" /> Nairobi, Kenya · Lagos, Nigeria</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 text-gold mt-0.5" /> +254 700 000 000</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 text-gold mt-0.5" /> hello@activeinsight.co</li>
+            <li className="flex gap-2"><MapPin className="h-4 w-4 text-gold mt-0.5" /><span>Surulere & Abule Egba, Lagos · Ngong Road, Nairobi</span></li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 text-gold mt-0.5" /><span>+254 100 730 474</span></li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 text-gold mt-0.5" /><span>hello@activeinsight.co</span></li>
           </ul>
           <div className="flex gap-3 mt-5">
-            <a href="#" aria-label="Instagram" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Instagram className="h-4 w-4" /></a>
-            <a href="#" aria-label="Facebook" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Facebook className="h-4 w-4" /></a>
-            <a href="#" aria-label="Twitter" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Twitter className="h-4 w-4" /></a>
-            <a href="#" aria-label="LinkedIn" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Linkedin className="h-4 w-4" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61589431627620&_rdc=1&_rdr#" target="_blank" rel="noreferrer" aria-label="Facebook" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Facebook className="h-4 w-4" /></a>
+            <a href="https://www.instagram.com/activeinsight_" target="_blank" rel="noreferrer" aria-label="Instagram" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Instagram className="h-4 w-4" /></a>
+            <a href="https://www.tiktok.com/@activeinsight_" target="_blank" rel="noreferrer" aria-label="TikTok" className="h-9 w-9 grid place-items-center border border-gold/30 hover:bg-gold hover:text-ink transition-colors"><Music2 className="h-4 w-4" /></a>
           </div>
         </div>
       </div>

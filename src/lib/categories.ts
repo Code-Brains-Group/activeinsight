@@ -4,7 +4,7 @@ import catOrganic from "@/assets/cat-organic.jpg";
 import catJewelry from "@/assets/cat-jewelry.jpg";
 import catRtw from "@/assets/cat-rtw.jpg";
 import catFabrics from "@/assets/cat-fabrics.jpg";
-import catFood from "@/assets/cat-food.jpg";
+import catFood from "@/assets/newImages/nigerianFoods.jpeg";
 import catWholesale from "@/assets/cat-wholesale.jpg";
 
 // Item images
@@ -171,7 +171,6 @@ export const categories: Category[] = [
       { name: "Red Palm Oil", desc: "Authentic Nigerian red palm oil, unrefined.", image: foodPalm },
       { name: "Ogbono Seeds", desc: "Wild mango seeds for draw soup.", image: foodOgbono },
       { name: "Crayfish (Dried & Ground)", desc: "Premium dried crayfish, finely ground.", image: foodCrayfish },
-      // { name: "Suya Spice Mix", desc: "Authentic yaji suya pepper blend.", image: foodSuya },
       { name: "Dried Stockfish & Bitter Leaf", desc: "Pantry staples vacuum-sealed for freshness.", image: foodStockfish },
     ],
   },

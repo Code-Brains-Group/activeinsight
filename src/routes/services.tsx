@@ -4,7 +4,7 @@ import sourcingImg from "@/assets/service-sourcing.jpg";
 import verificationImg from "@/assets/service-verification.jpg";
 import logisticsImg from "@/assets/service-logistics.jpg";
 import pickupImg from "@/assets/service-pickup.jpg";
-import paymentImg from "@/assets/service-payment.jpg";
+import paymentImg from "@/assets/nairaImage.jpeg";
 import { quoteWhatsAppUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/services")({

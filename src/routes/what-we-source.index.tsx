@@ -21,7 +21,7 @@ export const Route = createFileRoute("/what-we-source/")({
 function WhatWeSource() {
   return (
     <>
-      <PageHero eyebrow="Catalogue" title="What we source." intro="A curated range of authentic Nigerian categories — sourced, verified and delivered. Tap any category to explore items." />
+      <PageHero eyebrow="Catalogue" title="What we source." intro="A curated range of authentic Nigerian products listed below and more — sourced, verified and delivered to Kenya. Tap any category to explore items.(For Unique Items you do not find here you can request and have it delivered for you" />
       <section className="container-luxe py-20">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {categories.map((c, i) => (

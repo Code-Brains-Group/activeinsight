@@ -4,7 +4,7 @@ import catOrganic from "@/assets/cat-organic.jpg";
 import catJewelry from "@/assets/cat-jewelry.jpg";
 import catRtw from "@/assets/cat-rtw.jpg";
 import catFabrics from "@/assets/cat-fabrics.jpg";
-import catFood from "@/assets/newImages/nigerianFoods.jpeg";
+import catFood from "@/assets/nigerianFoods.jpeg";
 import catWholesale from "@/assets/cat-wholesale.jpg";
 
 // Item images
@@ -25,8 +25,8 @@ import orgShea from "@/assets/items/org-shea.jpg";
 import orgBlacksoap from "@/assets/newImages/blackSoap.jpeg";
 import orgCocoa from "@/assets/items/org-cocoa.jpg";
 import orgCoconut from "@/assets/items/org-coconut.jpg";
-import orgEssentialOils from "@/assets/newImages/essentialOils.jpg";
-import orgHairOils from "@/assets/newImages/hairOils.jpg";
+import orgBodyCream from "@/assets/newImages/bodyCream.png";
+import orgFaceCream from "@/assets/newImages/faceCream.png";
 
 import jewCoral from "@/assets/items/jew-coral.jpg";
 import jewNecklace from "@/assets/items/jew-necklace.jpg";
@@ -107,15 +107,15 @@ export const categories: Category[] = [
   {
     slug: "organic-products",
     title: "Organic Cosmetics",
-    desc: "Organic skincare, essential oils and natural beauty staples.",
+    desc: "Organic skincare, luxury creams and natural beauty staples.",
     image: catOrganic,
     items: [
       { name: "Raw Unrefined Shea Butter", desc: "Grade-A ivory shea, sourced from northern Nigeria.", image: orgShea },
       { name: "African Black Soap", desc: "Traditional Dudu-Osun style, plantain ash and palm.", image: orgBlacksoap },
       { name: "Pure Cocoa Butter", desc: "Cold-pressed cocoa butter blocks and tubs.", image: orgCocoa },
       { name: "Cold-Pressed Coconut Oil", desc: "Virgin coconut oil for skin, hair and cooking.", image: orgCoconut },
-      { name: "Essential Oils", desc: "Lavender, tea tree, eucalyptus and peppermint essential oils.", image: orgEssentialOils },
-      { name: "Natural Hair Oils", desc: "Castor, argan and jojoba oil blends for hair and scalp.", image: orgHairOils },
+      { name: "Body Cream", desc: "Nourishing and hydrating body cream made with natural plant extracts.", image: orgBodyCream },
+      { name: "Face Cream", desc: "Gentle, revitalising daily face cream for radiant skin.", image: orgFaceCream },
     ],
   },
   {

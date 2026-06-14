@@ -75,7 +75,7 @@ function Index() {
       {/* WHAT WE SOURCE */}
       <section className="bg-secondary/40 py-24">
         <div className="container-luxe">
-          <SectionHeader eyebrow="What We Source" title="Categories we deliver from Nigeria" intro="Browse the product categories our clients ask for most." />
+          <SectionHeader eyebrow="What We Source" title="Things we deliver from Nigeria" intro="Browse the product categories our clients ask for most." />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {categories.map((c) => (
               <Link
